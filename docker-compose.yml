@@ -1,0 +1,33 @@
+version: '3'
+services:
+
+    frontproxy:
+        build: 
+            dockerfile: ./nginx.dockerfile
+            context: .
+        volumes:
+            - ./config-nginx/:/etc/nginx/
+            - ./laravel-backend/:/var/www/
+        ports:
+            - "80:80"
+
+    laravel:
+        build:
+            dockerfile: laravel.dockerfile
+            context: .
+        container_name: php-fpm-laravel
+        volumes:
+            - ./laravel-backend/:/var/www/
+
+    db:
+        image: mysql:5.7
+        container_name: mysqllaravel
+        ports:
+            - 3306:3306
+        restart: always
+        tty: true
+        environment:
+            MYSQL_ROOT_PASSWORD: gustavo
+            MYSQL_DATABASE: meularavel
+            MYSQL_USER: gustavo
+            MYSQL_PASSWORD: gustavo
