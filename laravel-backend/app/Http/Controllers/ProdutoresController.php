@@ -7,6 +7,12 @@ use App\Models\Produtor;
 
 class ProdutoresController extends Controller
 {
+
+
+    public function __construct()
+    {
+        $this->middleware('jwt');
+    }
     /**
      * Display a listing of the resource.
      *
