@@ -7,11 +7,11 @@ APP_URL=http://localhost
 LOG_CHANNEL=stack
 
 DB_CONNECTION=mysql
-DB_HOST=localhost
+DB_HOST=mysqllaravel
 DB_PORT=3306
-DB_DATABASE=u564955085_brainagro
-DB_USERNAME=u564955085_brainagro
-DB_PASSWORD=MrV=3-2,p
+DB_DATABASE=meularavel
+DB_USERNAME=gustavo
+DB_PASSWORD=gustavo
 
 
 BROADCAST_DRIVER=log
