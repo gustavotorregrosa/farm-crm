@@ -38,7 +38,7 @@ class TabelaProdutor extends Component {
                 <table>
                     <thead>
                         <tr>
-                            <th>Culturas</th>
+                            <th>Produtores</th>
                             <th>Acoes</th>
                         </tr>
                     </thead>

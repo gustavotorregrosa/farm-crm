@@ -20,6 +20,8 @@ class CriaTblProdutorRural extends Migration
             $table->index(['cpf', 'cnpj']);
             $table->string('nome');
             $table->string('nome_fazenda');
+            $table->unsignedDecimal('area_total', 20,2)->nullable();
+            $table->unsignedDecimal('area_reserva', 20,2)->nullable();
             $table->unsignedBigInteger('id_cidade');
             $table->foreign('id_cidade')->references('id')->on('cidade');
             $table->timestamps();

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import SearchBar from '../searchBar/searchBar'
 import TabelaProdutores from './tabelaProdutor'
 import ListaPaginacao from '../searchBar/listaPaginacao'
-import ModalEditaProdutor from './modalEditaProdutor'
+import ModalEditaCriaProdutor from './modalEditaCriaProdutor'
 import ModalDeletaProdutor from './modalDeletaProdutor'
 import * as helper from '../../../suporte/helper'
 import { jwtFetch } from '../../../suporte/funcoes-customizadas'
@@ -115,7 +115,7 @@ class TelaProdutores extends Component {
                 <br />
                 <br />
                 <TabelaProdutores deletar={(el) => this.abreModalDeletaProdutor(el)} editar={(el) => this.abreModalEditaProdutor(el)} culturas={this.getProdutoresPaginados()} />        
-                <ModalEditaProdutor listarProdutores={() => this.listaCompletaProdutores()}
+                <ModalEditaCriaProdutor listarProdutores={() => this.listaCompletaProdutores()}
                 setAbreModal={f => this.abreModalEditaProdutor = f} />
                 <ModalDeletaProdutor listarProdutores={() => this.listaCompletaProdutores()} setAbreModal={f => this.childAbreModalDeletaProdutor = f}  />
                 </div>

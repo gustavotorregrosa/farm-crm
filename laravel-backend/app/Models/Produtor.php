@@ -26,6 +26,10 @@ class Produtor extends Model
         return $estado[0];
     }
 
+    public function areas_cultivo(){
+        return $this->hasMany('App\Models\AreaCultivada', 'produtor');
+    }
+
     public function save($options = [])
     {
         $valido = false;
@@ -43,4 +47,5 @@ class Produtor extends Model
 
         parent::save($options);
     }
+
 }
