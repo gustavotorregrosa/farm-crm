@@ -25,7 +25,6 @@ class ModalNovaAreasCultivo extends Component {
                 onCloseEnd: () => { 
                     this.setState({
                         nome: "",
-                        tipo: "",
                         area: ""
                     })
 

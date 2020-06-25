@@ -47,6 +47,7 @@ class NavBar extends Component {
                 <ul className="sidenav" id="minhasidenav">
                     <NavLink activeClassName={estilos.active} onClick={(e) => this.instancia.close()} to="/admin/culturas"><li><a href="#">Culturas</a></li></NavLink>
                     <NavLink activeClassName={estilos.active} onClick={(e) => this.instancia.close()} to="/admin/produtores"><li><a href="#">Produtores</a></li></NavLink>
+                    <NavLink activeClassName={estilos.active} onClick={(e) => this.instancia.close()} to="/admin/dashboard"><li><a href="#">Dashboard</a></li></NavLink>
                     <br />
                     <br />
                     <br />

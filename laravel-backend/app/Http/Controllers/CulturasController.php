@@ -136,9 +136,9 @@ class CulturasController extends Controller
             $cultura = Cultura::findOrFail($id);
             $nome = $cultura->nome;
 
-            // if($cultura->areas->count()){
-            //     return respostaCors([], 406, "Há áreas cultivadas com a cultura " . $nome);
-            // }
+            if($cultura->areas_cultivo->count()){
+                return respostaCors([], 406, "Há áreas cultivadas com a cultura " . $nome);
+            }
         
 
             $cultura->delete();

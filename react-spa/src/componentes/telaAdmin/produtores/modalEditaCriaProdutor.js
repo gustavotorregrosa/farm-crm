@@ -84,7 +84,6 @@ class EditaProdutor extends Component {
 
         });
 
-      
         jwtFetch("culturas/listar").then(tiposCultura => {
             this.setState({
                 tiposCultura
@@ -102,8 +101,6 @@ class EditaProdutor extends Component {
         })
     }
 
-
-
     selecionaCidadeProdutor = () => {
         let estado = this.state.estado.id || ""
         this.setState({
@@ -118,7 +115,6 @@ class EditaProdutor extends Component {
             this.instanciaSelectCidade = M.FormSelect.init(this.elemSelectCidade, {})
         })
     }
-
 
     selecionaEstadoProdutor(estado) {
         try {
@@ -321,8 +317,6 @@ class EditaProdutor extends Component {
     alterarAreaReservaProdutor = (e) => {
         let areaReserva = parseFloat(e.target.value)
         let areaTotal = parseFloat(this.state.areaTotal)
-        console.log("reserva " + areaReserva)
-        console.log("total " + areaTotal)
         if (areaReserva > areaTotal) {
             M.toast({ html: 'Área de reserva não pode ser maior do que área total' })
             return
@@ -356,13 +350,15 @@ class EditaProdutor extends Component {
 
     adicionaAreaCultivo = areaNova => {
         let areasCultivo = this.state.areasCultivo || []
-
         let areaTotal = this.state.areaTotal
         let areaReserva = this.state.areaReserva
         let areaCultivoUtilizada = 0
-        areasCultivo.map(el => {
-            areaCultivoUtilizada += el.area
-        })
+        if(areasCultivo.length){
+            areasCultivo.map(el => {
+                areaCultivoUtilizada += el.area
+            })
+        }
+      
         let areaRestante = areaTotal - areaReserva - areaCultivoUtilizada
         if(areaRestante < areaNova.area){
             M.toast({ html: 'Área restante insuficiente: ' + areaRestante + ' ha'  })

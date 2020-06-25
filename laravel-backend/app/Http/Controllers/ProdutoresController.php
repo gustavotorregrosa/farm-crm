@@ -12,7 +12,7 @@ class ProdutoresController extends Controller
 
     public function __construct()
     {
-        $this->middleware('jwt');
+        // $this->middleware('jwt');
     }
     /**
      * Display a listing of the resource.

@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import NavBar from './navBar/navBar'
 import TelaCulturas from './culturas/telaCultura'
 import TelaProdutores from './produtores/telaProdutor'
+import Dashboard from './dashboard/telaPrincipal'
 
 class TelaAdmin extends Component {
 
@@ -20,6 +21,7 @@ class TelaAdmin extends Component {
                 <Switch>
                     <Route path='/admin/culturas' component={TelaCulturas} />
                     <Route path='/admin/produtores' component={TelaProdutores} />
+                    <Route path='/admin/dashboard' component={Dashboard} />
                     <Redirect from="/admin/*" to="/admin" />
                 </Switch>
 
