@@ -37,7 +37,7 @@ class NavBar extends Component {
             <div>
                 <nav className="black">
                     <div className="nav-wrapper">
-                        <a href="#" style={{display: "inline", position: "relative"}} className="brand-logo">Stock Management</a>
+                        <a href="#" style={{display: "inline", position: "relative"}} className="brand-logo">Farm CRM</a>
                         <a href="#" onClick={(e) => this.instancia.open()} className="sidenav-trigger show-on-large"><i className="material-icons">menu</i></a>
                         <ul id="nav-mobile" className="right hide-on-med-and-down">
                             <li><a href="#" onClick={(e) => this.abreModalLogout(e)}>Logout</a></li>

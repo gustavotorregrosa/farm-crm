@@ -1,1 +1,1 @@
-export const url = 'http://brain-agro.local/api/'
+export const url = 'http://crm-farm-api.local/api/'

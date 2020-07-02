@@ -42,7 +42,7 @@ class NavBar extends Component {
             <div>
                 <nav className="black">
                     <div className="nav-wrapper">
-                        <a href="#" className="brand-logo">Brain Agro</a>
+                        <a href="#" className="brand-logo">Farm CRM</a>
                         <a href="#" onClick={(e) => this.instancia.open()} className="sidenav-trigger"><i className="material-icons">menu</i></a>
                         <ul id="nav-mobile" className="right hide-on-med-and-down">
                             <li><a href="#" onClick={(e) => this.abreModalRegistro(e)} >Registrar</a></li>
